@@ -244,14 +244,14 @@ namespace EthereumLab1
             private void button7_Click(object sender, EventArgs e)
             {
                   int id = 0;
-                  if (!int.TryParse(changeId.Text, out id))
+                  if (!int.TryParse(textBox1.Text, out id))
                         return;
 
                   RealEstateDTO data = GetObjectInfo(id);
-                  changeOwner.Text = data.Owner;
-                  changeAddress.Text = data.ReAddress;
-                  changeArea.Text = data.Area.ToString();
-                  changeRestrictions.Text = data.Restricted ? "Есть" : "Нет";
+                  ownerInfo.Text = data.Owner;
+                  addressInfo.Text = data.ReAddress;
+                  areaInfo.Text = data.Area.ToString();
+                  restrictionsInfo.Text = data.Restricted ? "Есть" : "Нет";
             }
       }
 }
